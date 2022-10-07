@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="../public/assets/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../public/assets/cwicon.png">
+    <title>Check Data</title>
+</head>
+
+<body>
+    <div class="container">
+    <h1 class="mb-4 mt-4">Checking Database</h1>
+    <a href="/insertdata" class="btn btn-info mt-2">Click Here To Insert Data</a>
+    <a href="/checkdata" class="btn btn-info mt-2">Click Here to Check Data</a>
+    <a href="/createTelegramPost" class="btn btn-info mt-2">Click Here to create Telegram Post</a>
+    <a href="/" class="btn btn-success mt-2">Click Here To go to Home</a>
+    
+    <div class="form-group mt-3">
+
+        <form action="/getpost" method="POST" id="f1">
+            <label for="tn">Topic Name</label>
+            <input type="text" name="tn" id="i1" placeholder="Topic Name" class="form-control">
+
+            <label for="cat" class="mt-3">Category Name</label>
+            <input type="text" name="cat" id="i3" placeholder="Basic/web/hr/etc" class="form-control">
+
+            <label for="com" class="mt-3">Company Name</label>
+            <input type="text" name="com" id="i4" placeholder="TCS/CTS/etc" class="form-control">
+
+            <label for="lan" class="mt-3">Language Specific</label>
+            <input type="text" name="lan" id="i5" placeholder="JAVA/C++/etc" class="form-control">
+
+            <label for="dou" class="mt-3">Date of Upload</label>
+            <input type="text" name="dou" id="i6" placeholder="10-12-2021" class="form-control">
+
+            <label for="ub" class="mt-3">Uploaded by</label>
+            <input type="text" name="ub" id="i7" placeholder="Name of the editor" class="form-control">
+
+            <label for="toc" class="mt-3">Type of Conetent</label>
+            <input type="text" name="toc" id="i8" placeholder="Article/Job Post/etc" class="form-control">
+
+            <button type="submit" class="mt-4 btn btn-primary">Click Here To Check</button>
+        </form>
+        
+    </div>
+    </div>
+
+</body>
+
+</html>

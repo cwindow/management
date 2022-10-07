@@ -1,0 +1,11 @@
+body{
+    background: linear-gradient(to right, #8e44ad, #c0392b);
+    /* background: linear-gradient(to right, #de6161, #2657eb); */
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+  }
+
+.card{
+  color: black;
+}

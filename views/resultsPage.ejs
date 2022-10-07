@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="../public/assets/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../public/assets/cwicon.png">
+    <title>Result</title>
+</head>
+
+<body>
+    <div class="container">
+            <h1 class="mb-4 mt-4">Your Required DataBase is successfully Fetched</h1>
+            <a href="/insertdata" class="btn btn-info mt-2">Click Here To Insert Data</a>
+            <a href="/checkdata" class="btn btn-info mt-2">Click Here to Check Data</a>
+            <a href="/createTelegramPost" class="btn btn-info mt-2">Click Here to create Telegram Post</a>
+            <a href="/" class="btn btn-success mt-2">Click Here To go to Home</a>
+
+            <h5 class="mt-4 mb-2">Total Record fetched: <%= rows.length %></h5>
+            
+            <div class="mt-4 mb-5">
+                <% try{ %>
+
+                    <% for(let i=0; i<rows.length;i++){ %>
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h4 class="card-title mt-2">Topic Name</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].topicName %>
+                                </div>
+
+                                <h4 class="card-title  mt-2">Link</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].link %>
+                                </div>
+
+                                <h4 class="card-title  mt-2">Category</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].category %>
+                                </div>
+
+                                <h4 class="card-title  mt-2">Company Name</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].companyName %>
+                                </div>
+                                <h4 class="card-title  mt-2">Language Specific</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].languageSpecific %>
+                                </div>
+
+                                <h4 class="card-title  mt-2">Date Of Upload</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].dateUploaded %>
+                                </div>
+
+                                <h4 class="card-title  mt-2">Uploaded By</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].uploadedBy %>
+                                </div>
+
+                                <h4 class="card-title  mt-2">Type of Content</h4>
+                                <div class="card-subtitle">
+                                    <%= rows[i].typeOfContent %>
+                                </div>
+
+
+
+
+                            </div>
+                            
+                        </div>
+                        <% } %>
+
+                            <% }catch(e){ %>
+                                <div>
+                                    <% let results='No result Found' %>
+                                        <h2>
+                                            <%= results %>
+                                        </h2>
+                                </div>
+
+                                <% } %>
+
+
+
+            </div>
+    </div>
+</body>
+
+</html>
