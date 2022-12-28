@@ -11,28 +11,32 @@
     <link href="../public/assets/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../public/assets/cwicon.png">
-    <title>Error</title>
+    <title>Check Data</title>
 </head>
 
 <body>
     <%- include('header.ejs') %>
     <div class="container">
-        <h1 class="mb-4 mt-4">There is some Problem here! Please resubmit your Query</h1>
-        <a href="/insertdata" class="btn btn-info mt-2">Click Here To Insert Data</a>
+    <h1 class="mb-4 mt-4">Checking Database</h1>
+    <a href="/insertdata" class="btn btn-info mt-2">Click Here To Insert Data</a>
         <a href="/checkdata" class="btn btn-info mt-2">Click Here to Check Data</a>
         <a href="/createTelegramPost" class="btn btn-info mt-2">Click Here Telegram Post Generation</a>
         <a href="/sqlquery" class="btn btn-info mt-2">Click Here for Custom Query</a>
         <a href="/" class="btn btn-success mt-2">Click Here To go to Home</a>
         <a href="/logout" class="btn btn-success mt-2">Click Here To Logout</a>
+    
+    <div class="form-group mt-3">
 
-        <div>
-            <h2 class="mb-4 mt-4" >
-                <%= results %>
-                    <%= er %>
-            </h2>
+        <form action="/sqlpost" method="POST" id="f1">
+            <label for="tn">Write Your Sql Query</label>
+            <textarea  name="tn" id="i1" placeholder="SQL Query goes here" class="form-control"></textarea>
 
-        </div>
+            <button type="submit" class="mt-4 btn btn-primary">Click Here To Check</button>
+        </form>
+        
     </div>
+    </div>
+
 </body>
 
 </html>

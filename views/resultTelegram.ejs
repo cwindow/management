@@ -15,12 +15,15 @@
 </head>
 
 <body>
+    <%- include('header.ejs') %>
     <div class="container">
             <h1 class="mb-4 mt-4">Your Required Post is Successfully created</h1>
-            <a href="/insertdata" class="btn btn-info mt-2">Click Here To Insert Data</a>
-            <a href="/checkdata" class="btn btn-info mt-2">Click Here to Check Data</a>
-            <a href="/createTelegramPost" class="btn btn-info mt-2">Click Here to create Telegram Post</a>
-            <a href="/" class="btn btn-success mt-2">Click Here To go to Home</a>
+        <a href="/insertdata" class="btn btn-info mt-2">Click Here To Insert Data</a>
+        <a href="/checkdata" class="btn btn-info mt-2">Click Here to Check Data</a>
+        <a href="/createTelegramPost" class="btn btn-info mt-2">Click Here Telegram Post Generation</a>
+        <a href="/sqlquery" class="btn btn-info mt-2">Click Here for Custom Query</a>
+        <a href="/" class="btn btn-success mt-2">Click Here To go to Home</a>
+        <a href="/logout" class="btn btn-success mt-2">Click Here To Logout</a>
 
             
             <div class="mt-4 mb-5">
@@ -31,38 +34,22 @@
                                 <h4 class="card-title mt-2">Telegram Post</h4>
                                 <div class="card-subtitle" id="sample">
                                     <h5 class="mb-4 mt-4" >
-                                    🔥Alert New🔥 <%= result[0] %> Off-Campus Hiring🔥</br>
-                                    Link here👇🏻</br>
+                                    <%= result[0] %> <%= firstpart[0].startingpara %>
+                                    </br>
                                     </br>
                                     <%= result[1] %></br>
                                     </br>
                                     ✅ <%= result[2] %></br>
                                     </br>
-                                    👉🏻 Qualifications</br>
-                                    👉🏻 Eligible batch <%= result[4] %></br>
-                                    👉🏻 Salary / Apply link</br>
-                                    </br>
+                                    <%= secondpart[0].middlepara %>
+                                    </br></br>
                                     💰 CTC: <%= result[3] %></br>
                                     </br>
                                     </br>
                                     All links are below</br>
                                     <%= result[1] %></br>
                                     </br>
-                                    Telegram: @codewindow</br>
-                                    For more Job Info.</br>
-                                    Don't miss this opportunity❗</br>
-                                    Always Stay Updated at: https://codewindow.in/category/job-info/</br>
-                                    </br>
-                                    For more such updates and materials follow Telegram: @codewindow</br>
-                                    </br>
-                                    We will keep notifying you regarding placements.</br>
-                                    </br>
-                                    For Study Material: Follow @codewindow</br>
-                                    For 2023 Off-Campus Job-info: @codewindow</br>
-                                    For 2022 Off-Campus Job-info: @codewindow</br>
-                                    For 2021 Off-Campus Job-info: @codewindow</br>
-                                    For 2020 Off-Campus Job-info: @codewindow</br>
-                                    Join ASAP and ask your friends to join too.</br>
+                                    <%= lastpart[0].bottompara %>
                                     </h5>
 
                                 </div>

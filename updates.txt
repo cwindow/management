@@ -1,0 +1,4 @@
+login - logout(Admin)
+Dropdown - authors/ category/company/language specific/Type of Conetent/     done
+sql running -                                                                done
+Telegram post - modification                                                 done
