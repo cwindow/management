@@ -32,7 +32,8 @@ app.use(cookieParser())
 app.use(session({
     resave: true,
     saveUninitialized: true,
-    secret:'secret'
+    secret:'secret',
+    cookie:{maxAge: 60000}
 }))
 
 var auth = function(req, res, next){
