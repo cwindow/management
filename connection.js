@@ -14,6 +14,7 @@ var db = mysql.createPool({
     user: userName,
     password: password,
     database: dbname,
+    setTimeout: 10000
 });
 
 db.getConnection((err,connection)=> {
