@@ -30,10 +30,11 @@ app.use(express.urlencoded({extended: false}))
 app.use('/public', express.static('public'));
 app.use(cookieParser())
 app.use(session({
-    resave: false,
-    saveUninitialized: true,
     secret:'secret',
-    cookie:{maxAge: 60000, sameSite: false}
+    resave: true,
+    saveUninitialized: true,
+    rolling:true,
+    cookie:{maxAge: 600000, sameSite: false}
 }))
 
 var auth = function(req, res, next){
@@ -117,7 +118,7 @@ app.post('/loginUser',async(req, res) => {
         else{
             if(userN === userdata[0].username && password === userdata[0].password){
                 req.session.user=userdata[0].name
-                req.session.cookie.maxAge=3600000
+                //req.session.cookie.maxAge=3600000
                 res.redirect('/')
             }
             else{
