@@ -9,12 +9,14 @@ userName = process.env.userNam
 password= process.env.password
 
 var db = mysql.createPool({
-  connectionLimit:4,
-  host: hostName,
+  connectionLimit : 1000,
+    connectTimeout  : 60 * 60 * 1000,
+    acquireTimeout  : 60 * 60 * 1000,
+    timeout         : 60 * 60 * 1000,
+    host: hostName,
     user: userName,
     password: password,
-    database: dbname,
-    setTimeout: 10000
+    database: dbname
 });
 
 db.getConnection((err,connection)=> {
