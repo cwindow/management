@@ -8,8 +8,6 @@ dbname = process.env.dbname
 userName = process.env.userNam
 password= process.env.password
 
-console.log(hostName,dbname,userName,password)
-
 var db = mysql.createPool({
   connectionLimit:4,
   host: hostName,

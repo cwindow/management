@@ -16,11 +16,6 @@ const portNo=process.env.PORT || '5000'
 // userName = 'root'
 // password= ''
 
-hostName = 'codewindow.in'
-dbname = 'u997094728_contentmanager'
-userName = 'u997094728_contentmanager'
-password= 'Ssdp#9752!$2ed'
-
 
 // hostName = 'sql6.freesqldatabase.com'
 // dbname = 'sql6524945'
