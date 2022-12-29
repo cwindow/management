@@ -30,7 +30,7 @@ app.use(express.urlencoded({extended: false}))
 app.use('/public', express.static('public'));
 app.use(cookieParser())
 app.use(session({
-    resave: true,
+    resave: false,
     saveUninitialized: true,
     secret:'secret',
     cookie:{maxAge: 60000}
@@ -117,6 +117,7 @@ app.post('/loginUser',async(req, res) => {
         else{
             if(userN === userdata[0].username && password === userdata[0].password){
                 req.session.user=userdata[0].name
+                req.session.user.cookie.maxAge=3600000
                 res.redirect('/')
             }
             else{
@@ -444,9 +445,5 @@ app.get('/createTelegramPost', auth,(req, res)=>{
 
 app.listen(portNo,()=>{
     console.log(`Listening on port ${portNo}`)
-    if(req.session.user)
-        console.log("session for: ",req.session.user)
-    else
-        console.log("no user")
 
 });
