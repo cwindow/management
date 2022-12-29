@@ -33,8 +33,8 @@ app.use(session({
     secret:'secret',
     resave: true,
     saveUninitialized: false,
-    rolling:true,
-    cookie:{maxAge: 600000, sameSite: false}
+    //rolling:true,
+    cookie:{maxAge: 600000}
 }))
 
 var auth = function(req, res, next){
@@ -122,8 +122,11 @@ app.post('/loginUser',async(req, res) => {
             res.send("Login Failed")
         else{
             if(userN === userdata[0].username && password === userdata[0].password){
+                var hour = 3600000
                 req.session.user=userdata[0].name
-                //req.session.cookie.maxAge=3600000
+                req.session.cookie.expires = new Date(Date.now()+hour)
+                req.session.cookie.maxAge=100*hour
+
                 res.redirect('/')
             }
             else{
