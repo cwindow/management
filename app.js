@@ -33,7 +33,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     secret:'secret',
-    cookie:{maxAge: 60000}
+    cookie:{maxAge: 60000, sameSite: false}
 }))
 
 var auth = function(req, res, next){
