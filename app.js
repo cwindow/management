@@ -32,7 +32,7 @@ app.use(cookieParser())
 app.use(session({
     secret:'secret',
     resave: true,
-    saveUninitialized: true,
+    saveUninitialized: false,
     rolling:true,
     cookie:{maxAge: 600000, sameSite: false}
 }))
