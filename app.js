@@ -117,7 +117,7 @@ app.post('/loginUser',async(req, res) => {
         else{
             if(userN === userdata[0].username && password === userdata[0].password){
                 req.session.user=userdata[0].name
-                req.session.user.cookie.maxAge=3600000
+                req.session.cookie.maxAge=3600000
                 res.redirect('/')
             }
             else{
