@@ -444,6 +444,9 @@ app.get('/createTelegramPost', auth,(req, res)=>{
 
 app.listen(portNo,()=>{
     console.log(`Listening on port ${portNo}`)
-    console.log("session for: ",req.session.user)
+    if(req.session.user)
+        console.log("session for: ",req.session.user)
+    else
+        console.log("no user")
 
 });
