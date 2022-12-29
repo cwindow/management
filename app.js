@@ -38,11 +38,15 @@ app.use(session({
 }))
 
 var auth = function(req, res, next){
-    if(req.session && req.session.user)
+    if(req.session && req.session.user){
+        console.log("user session: ", req.session.user)
         return next()
-    else
-        console.log(req.session.user)
+    }
+    else{
+        console.log("user session: ", req.session.user)
         return res.sendStatus(401)
+
+        }
 }
 
 // var db = mysql.createConnection({
