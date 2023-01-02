@@ -11,17 +11,6 @@ const portNo=process.env.PORT || '5000'
 // - - - - - - -- - - -  all libraries imported here- - -- - - - - - - - - -- - - - - - - - -- 
 
 
-// hostName = 'localhost'
-// dbname = 'u997094728_contentmanager'
-// userName = 'root'
-// password= ''
-
-
-// hostName = 'sql6.freesqldatabase.com'
-// dbname = 'sql6524945'
-// userName = 'sql6524945'
-// password = process.env.PASS_CLOUD_DB
-
 let done = 'Status: Connect to Database'
 const app = express()
 
