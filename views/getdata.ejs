@@ -36,6 +36,7 @@
                 <% for(let i=0; i<category.length;i++){ %>
                     <option value="<%=category[i].category%>"><%=category[i].category%></option>
                 <% } %>
+                    <option value="">None</option>
             </select>
 
             <label for="com" class="mt-3">Company Name</label>
@@ -43,6 +44,7 @@
                 <% for(let i=0; i<company.length;i++){ %>
                     <option value="<%=company[i].company%>"><%=company[i].company%></option>
                 <% } %>
+                    <option value="">None</option>
             </select>
 
             <label for="lan" class="mt-3">Language Specific</label>
@@ -50,16 +52,18 @@
                 <% for(let i=0; i<language.length;i++){ %>
                     <option value="<%=language[i].language%>"><%=language[i].language%></option>
                 <% } %>
+                    <option value="">None</option>
             </select>
 
             <label for="dou" class="mt-3">Date of Upload</label>
-            <input type="date" name="dou" id="i6" value="2022-12-10" required class="form-control">
+            <input type="date" name="dou" id="i6" value="" required class="form-control">
 
             <label for="ub" class="mt-3">Uploaded by</label>
             <select type="text" name="ub" id="i7"  required class="form-control">
                 <% for(let i=0; i<authors.length;i++){ %>
                     <option value="<%=authors[i].authors%>"><%=authors[i].authors%></option>
                 <% } %>
+                    <option value="">None</option>
             </select>
 
             <label for="toc" class="mt-3">Type of Conetent</label>
@@ -67,6 +71,7 @@
                 <% for(let i=0; i<type.length;i++){ %>
                     <option value="<%=type[i].typeofcontent%>"><%=type[i].typeofcontent%></option>
                 <% } %>
+                    <option value="">None</option>
             </select>
             <button type="submit" class="mt-4 btn btn-primary">Click Here To Check</button>
         </form>

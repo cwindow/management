@@ -11,17 +11,6 @@ const portNo=process.env.PORT || '5000'
 // - - - - - - -- - - -  all libraries imported here- - -- - - - - - - - - -- - - - - - - - -- 
 
 
-// hostName = 'localhost'
-// dbname = 'u997094728_contentmanager'
-// userName = 'root'
-// password= ''
-
-
-// hostName = 'sql6.freesqldatabase.com'
-// dbname = 'sql6524945'
-// userName = 'sql6524945'
-// password = process.env.PASS_CLOUD_DB
-
 let done = 'Status: Connect to Database'
 const app = express()
 
@@ -49,26 +38,6 @@ var auth = function(req, res, next){
         }
 }
 
-// var db = mysql.createConnection({
-//     host: hostName,
-//     user: userName,
-//     password: password,
-//     database: dbname,
-//     connectTimeout:10000
-//   });
-
-    
-//     db.connect((err) => {
-//         if(err) {
-//             console.log(err);
-//             return;
-//         }
-//         console.log('My SQL Conneced for content database')
-//         done = 'Status: Connected to Database'
-//     })
-
-/* *********************************************** */
-
 app.get('/',(req, res) => {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     if(req.session.user){
@@ -93,9 +62,7 @@ function userData(username){
                 resolve(rows)
             }
             else{
-                //res.render('errHandle',{results: "No Such Record Found", er: err})
-                //const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-                //console.log("error")
+                
                 reject("error")
             }
         })
@@ -262,9 +229,7 @@ function optionQuery(column){
                 resolve(rows)
             }
             else{
-                //res.render('errHandle',{results: "No Such Record Found", er: err})
-                //const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-                //console.log("error")
+                
                 reject('error')
             }
         })
