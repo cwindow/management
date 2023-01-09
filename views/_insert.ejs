@@ -36,6 +36,7 @@
                         <option value="<%=category[i].category%>">
                             <%=category[i].category%>
                         </option>
+                        <option value="">None</option>
                         <% } %>
                 </select>
                 <!-- <input type="text" name="cat" id="i3"  required class="form-control">  -->
@@ -49,6 +50,7 @@
                         <option value="<%=company[i].company%>">
                             <%=company[i].company%>
                         </option>
+                        <option value="">None</option>
                         <% } %>
                 </select>
 
@@ -58,6 +60,7 @@
                         <option value="<%=language[i].language%>">
                             <%=language[i].language%>
                         </option>
+                        <option value="">None</option>
                         <% } %>
                 </select>
                 <label for="dou" class="mt-3">Date of Upload</label>
@@ -70,6 +73,7 @@
                             <%=authors[i].authors%>
                         </option>
                         <% } %>
+                        <option value="">None</option>
                 </select>
                 <label for="toc" class="mt-3">Type of Conetent</label>
                 <select type="text" name="toc" id="i8" required class="form-control">
@@ -78,6 +82,7 @@
                             <%=type[i].typeofcontent%>
                         </option>
                         <% } %>
+                        <option value="">None</option>
                 </select>
                 <label for="pap" class="mt-3">Post Authentication password</label>
                 <input type="password" name="pap" id="i9" required class="form-control">
